@@ -59,3 +59,174 @@ ul,
 ol {
   list-style: none;
 }
+
+/*Miguel Part  Experiencias */
+.experiences {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e0e0e0;
+}
+
+.experiences h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  background-color: #b76b6b; /* Color temporal */
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.card .tag {
+  background-color: #00cc44;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card a {
+  margin-top: 10px;
+  color: #00cc44;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Planes */
+.plans {
+  background-color: #fff;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.plans h2 {
+  color: #107c10;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.plans h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.plans p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.platform-buttons {
+  margin-bottom: 40px;
+}
+
+.platform-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 2px solid #107c10;
+  background-color: white;
+  color: #107c10;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.platform-buttons .active {
+  background-color: #107c10;
+  color: white;
+}
+
+.plan-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.plan-card {
+  width: 300px;
+  border: 1px solid #107c10;
+  padding: 25px 20px;
+  text-align: left;
+  background-color: #fff;
+}
+
+.plan-card h4 {
+  font-size: 20px;
+  color: #107c10;
+  margin-bottom: 10px;
+}
+
+.plan-card p {
+  margin-bottom: 15px;
+}
+
+.plan-card .join-btn {
+  display: inline-block;
+  background-color: #107c10;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.plan-card .terms {
+  font-size: 13px;
+  color: #444;
+}
+
+.plan-card .terms a {
+  color: #107c10;
+  font-weight: bold;
+}
+
+.benefits {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  color: #107c10;
+  font-weight: 500;
+}
+
+.plan-links {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.plan-links a {
+  color: #107c10;
+  font-weight: bold;
+  text-decoration: none;
+}
