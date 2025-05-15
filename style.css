@@ -61,6 +61,13 @@ ol {
 }
 
 /*Miguel Part  Experiencias */
+
+.elige-tu-plan {
+  background-color: #ece6e6;
+  color: #0e0000;
+  padding: 20px;
+  text-align: center;
+}
 .experiences {
   text-align: center;
   padding: 40px 20px;
@@ -114,115 +121,138 @@ ol {
 }
 
 /* Planes */
-.plans {
-  background-color: #fff;
-  color: #000;
-  padding: 60px 20px;
+section.plans {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .plans h2 {
-  color: #107c10;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
 .plans h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .plans p {
   font-size: 16px;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
+  color: #333;
+  margin-bottom: 30px;
 }
 
+/* Botones de plataforma */
 .platform-buttons {
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 12px;
 }
 
 .platform-buttons button {
   padding: 10px 20px;
-  margin: 0 10px;
   border: 2px solid #107c10;
   background-color: white;
   color: #107c10;
   font-weight: bold;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.platform-buttons .active {
+.platform-buttons button.active,
+.platform-buttons button:hover {
   background-color: #107c10;
   color: white;
 }
 
+/* Tarjetas de plan */
 .plan-options {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
 }
 
 .plan-card {
-  width: 300px;
+  flex: 1 1 300px;
   border: 1px solid #107c10;
+  border-radius: 8px;
   padding: 25px 20px;
   text-align: left;
-  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .plan-card h4 {
-  font-size: 20px;
-  color: #107c10;
-  margin-bottom: 10px;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.plan-card p {
+.plan-card p strong {
+  display: block;
+  font-size: 16px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .plan-card .join-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #107c10;
-  color: white;
-  padding: 10px 20px;
+  background-color: #7ee000;
+  color: #000;
+  padding: 10px 18px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.plan-card .join-btn:hover {
+  background-color: #5ab300;
 }
 
 .plan-card .terms {
   font-size: 13px;
   color: #444;
+  margin-bottom: 20px;
 }
 
 .plan-card .terms a {
-  color: #107c10;
   font-weight: bold;
+  color: #107c10;
+  text-decoration: underline;
 }
 
-.benefits {
+.plan-card .benefits {
   list-style: none;
   padding-left: 0;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
 }
 
-.benefits li {
-  margin-bottom: 10px;
-  color: #111111;
-  font-weight: 500;
+.plan-card .benefits li::before {
+  content: '✔ ';
+  color: #107c10;
 }
 
+/* Enlaces inferiores */
 .plan-links {
+  margin-top: 30px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   gap: 100px;
-  font-size: 15px;
-  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .plan-links a {
@@ -231,11 +261,15 @@ ol {
   text-decoration: none;
 }
 
+.plan-links a:hover {
+  text-decoration: underline;
+}
+
 /* Header */
 .header {
   background-color: #0f0f0f;
   padding: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -274,7 +308,7 @@ ol {
 }
 
 .acciones .btn {
-  background-color: #143B40;
+  background-color: #143b40;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -284,10 +318,10 @@ ol {
 }
 
 .acciones .btn:hover {
-  background-color: #F2B263;
+  background-color: #f2b263;
 }
 
-h1{
+h1 {
   padding: 0;
   margin: 10px 50px 10px 0;
   color: white;
@@ -295,7 +329,7 @@ h1{
   flex-direction: row;
 }
 
-.acciones h2{
+.acciones h2 {
   color: white;
   font-size: 15px;
   padding: 0;
@@ -304,6 +338,6 @@ h1{
   text-decoration: underline;
 }
 
-.acciones h2:hover{
-  color: #BF793B;
+.acciones h2:hover {
+  color: #bf793b;
 }
