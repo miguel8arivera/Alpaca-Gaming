@@ -230,3 +230,80 @@ ol {
   font-weight: bold;
   text-decoration: none;
 }
+
+/* Header */
+.header {
+  background-color: #0f0f0f;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 80px;
+  border-radius: 50px;
+  margin: 15px 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 50px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.acciones .btn {
+  background-color: #143B40;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.acciones .btn:hover {
+  background-color: #F2B263;
+}
+
+h1{
+  padding: 0;
+  margin: 10px 50px 10px 0;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.acciones h2{
+  color: white;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.acciones h2:hover{
+  color: #BF793B;
+}
