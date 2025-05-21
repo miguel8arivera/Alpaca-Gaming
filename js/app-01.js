@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // 2. Seleccionar el primer botón con clase "active"
-  var activeBtn = document.querySelector('button.active');
+  const activeBtn = document.querySelector('button.active');
 
   // 3. Si existe, registrar el evento de clic
   if (activeBtn) {
