@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     activeBtn.addEventListener('click', function () {
       // Leer la URL de destino; usa una por defecto si no existe
       const targetUrl =
-        activeBtn.getAttribute('data-url') || 'https://www.google.com';
+        activeBtn.getAttribute('data-url') || DEFAULT_FALLBACK_URL;
 
       // Abrir en una nueva pestaña ("_blank") y sin devolver control a la página
       window.open(targetUrl, '_blank', 'noopener,noreferrer');
