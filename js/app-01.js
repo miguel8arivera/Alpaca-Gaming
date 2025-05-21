@@ -1,9 +1,18 @@
-let $choosePlanButtons = document.querySelectorAll('.plan-card .join-btn');
+document.addEventListener('DOMContentLoaded', function () {
+  // 2. Seleccionar el primer botón con clase "active"
+  const activeBtn = document.querySelector('.plan-card .join-btn.active');
 
-$choosePlanButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Lógica para manejar el clic en el botón "Unirse ahora"
-    console.log('Unirse ahora');
-    // Aquí puedes agregar la lógica para redirigir al usuario a la página de pago o mostrar un modal, etc.
-  });
+  // 3. Si existe, registrar el evento de clic
+  if (activeBtn) {
+    activeBtn.addEventListener('click', function () {
+      // Leer la URL de destino; usa una por defecto si no existe
+      const targetUrl =
+        activeBtn.getAttribute('data-url') || DEFAULT_FALLBACK_URL;
+
+      // Abrir en una nueva pestaña ("_blank") y sin devolver control a la página
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    });
+  } else {
+    console.warn('No se encontró ningún <button class="active"> en la página.');
+  }
 });
