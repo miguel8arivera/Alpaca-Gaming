@@ -20,6 +20,49 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* samuel carrusel */
+.carrusel-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel {
+  display: flex;
+  width: 500%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carrusel img {
+  width: 100%;
+  flex: 1 0 100%;
+  height: auto;
+}
+
+.carrusel-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000088;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
 
 /* Imágenes y elementos multimedia */
 img,
