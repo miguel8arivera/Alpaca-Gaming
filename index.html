@@ -62,22 +62,37 @@
     </header>
 
     <!-- Samuel ==> Imagen principal y carrusel -->
-    <section class="samuel">
-      <!-- Aquí iría el slider o collage de imágenes destacadas -->
-<h2>Sección de Samuel - Carrusel de Juegos</h2>
-<div class="carrusel-container">
-  <div class="carrusel" id="carrusel">
-    <img src="img/juego1.jpg" alt="Juego 1">
-    <img src="img/juego2.jpg" alt="Juego 2">
-    <img src="img/juego3.jpg" alt="Juego 3">
-    <img src="img/juego4.jpg" alt="Juego 4">
-    <img src="img/juego5.jpg" alt="Juego 5">
+    <section class="carrusel-juegos">
+  <h2>Juegos destacados</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="img/juego1.jpg" alt="Juego 1" />
+      <h3>Juego 1</h3>
+      <p>Incluido con Game Pass</p>
+    </div>
+    <div class="card">
+      <img src="img/juego2.jpg" alt="Juego 2" />
+      <h3>Juego 2</h3>
+      <p>Incluido con Game Pass</p>
+    </div>
+    <div class="card">
+      <img src="img/juego3.jpg" alt="Juego 3" />
+      <h3>Juego 3</h3>
+      <p>Incluido con Game Pass</p>
+    </div>
+    <div class="card">
+      <img src="img/juego4.jpg" alt="Juego 4" />
+      <h3>Juego 4</h3>
+      <p>Incluido con Game Pass</p>
+    </div>
+    <div class="card">
+      <img src="img/juego5.jpg" alt="Juego 5" />
+      <h3>Juego 5</h3>
+      <p>Incluido con Game Pass</p>
+    </div>
   </div>
-  <button id="prevBtn">⟨</button>
-  <button id="nextBtn">⟩</button>
-</div>
+</section>
 
-    </section>
 
     <!-- Diego ==> Sección de juegos destacados -->
     <section class="diego">
@@ -174,29 +189,5 @@
       <!-- Información legal, enlaces de soporte, redes sociales -->
       <h2>Pie de página - Angely</h2>
     </footer>
-
-    <script>
-  const carrusel = document.getElementById('carrusel');
-  let index = 0;
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    if (index < 4) {
-      index++;
-      updateCarrusel();
-    }
-  });
-
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    if (index > 0) {
-      index--;
-      updateCarrusel();
-    }
-  });
-
-  function updateCarrusel() {
-    carrusel.style.transform = `translateX(-${index * 100}%)`;
-  }
-</script>
-
   </body>
 </html>
