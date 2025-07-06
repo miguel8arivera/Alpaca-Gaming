@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       /* Estilos temporales para diferenciar secciones */
@@ -26,16 +30,6 @@
         color: black;
         padding: 20px;
       }
-      .lucas {
-        background-color: #f08080;
-        color: black;
-        padding: 20px;
-      }
-      footer {
-        background-color: #2f4f4f;
-        color: white;
-        padding: 20px;
-      }
     </style>
     <title>Alpaca Gaming</title>
   </head>
@@ -49,9 +43,9 @@
         <nav class="nav">
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Juegos</a></li>
-            <li><a href="#">Planes</a></li>
-            <li><a href="#pf">Pregúntas frecuentes</a></li>
+            <li><a href="#juegos">Juegos</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#preguntas">Pregúntas frecuentes</a></li>
           </ul>
         </nav>
         <div class="acciones">
@@ -61,33 +55,293 @@
       </div>
     </header>
 
-    <!-- Samuel ==> Imagen principal y carrusel -->
-    <section class="samuel">
-      <!-- Aquí iría el slider o collage de imágenes destacadas -->
-      <h2>Sección de Samuel - Imagen principal / Carrusel</h2>
-    </section>
+    <section class="game-carousel-section">
+      <div class="section-overlay"></div>
 
-    <!-- Diego ==> Sección de juegos destacados -->
-    <section class="diego">
-      <!-- Texto principal con mensaje de juegos nuevos y beneficios -->
-      <h2>Sección de Diego - Juegos destacados</h2>
-    </section>
+      <div class="carousel-container">
+        <h2 class="carousel-main-title">
+          Descubre tu siguiente juego favorito
+        </h2>
 
-    <!-- Miguel ==> Planes de Game Pass -->
-    <section class="elige-tu-plan">
-      <!-- Detalles de los planes y beneficios adicionales -->
-      <section class="experiences">
-        <h2>Disfruta aún más con Game Pass</h2>
-        <div class="cards">
-          <article class="card">
-            <p class="tag">ULTIMATE</p>
-            <h3>Experimenta el mundo de EA</h3>
-            <a href="#">EXPLORA JUEGOS</a>
-          </article>
-          <article class="card"></article>
-          <article class="card"></article>
+        <div class="carousel-wrapper">
+          <button id="prevBtn" class="carousel-btn prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="game-card">
+                <img src="/img/01-call-duty.jpg" alt="Little Nightmares II" />
+                <p>Little Nightmares II</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/02-game-.jpg" alt="Rise of the Tomb Raider" />
+                <p>Rise of the Tomb Raider</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/03-game.jpg" alt="Ultimate Chicken Horse" />
+                <p>Ultimate Chicken Horse</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/game-4.jpg" alt="Call of Duty: WWII" />
+                <p>Call of Duty: WWII</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/02-game-.jpg" alt="Mecha BREAK" />
+                <p>Mecha BREAK</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/03-game.jpg" alt="God of War Ragnarök" />
+                <p>God of War Ragnarök</p>
+              </div>
+              <div class="game-card">
+                <img src="/img/02-game-.jpg" alt="Spider-Man 2" />
+                <p>Spider-Man 2</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="nextBtn" class="carousel-btn next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
-      </section>
+
+        <h3 class="bottom-cta-title">
+          DISFRUTA DE<br />CIENTOS DE<br />JUEGOS DE ALTA<br />CALIDAD
+        </h3>
+      </div>
+    </section>
+
+    <section class="day-one-section">
+      <div class="day-one-container">
+        <h1>JUEGA DESDE EL DÍA<br />UNO</h1>
+        <div class="accent-line"></div>
+        <p>
+          Disfruta de increíbles juegos nuevos de Xbox Game Studios, Bethesda
+          Softworks, Activision Blizzard, estudios indie y mucho más desde el
+          primer día. Disponible con Game Pass Ultimate y PC Game Pass.
+        </p>
+        <div class="cta-links">
+          <a href="#">MÁS INFORMACIÓN ›</a>
+          <a href="#">EXPLORA EL CATÁLOGO ›</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-game-section" id="juegos">
+      <div class="featured-container">
+        <div class="featured-image-panel">
+          <div class="game-visuals active" data-game="oblivion">
+            <div
+              class="background-effect"
+              style="background-image: url('/img/05-imagen-principal.png')"
+            ></div>
+          </div>
+          <div class="game-visuals" data-game="doom">
+            <div
+              class="background-effect"
+              style="background-image: url('/img/01-call-duty.jpg')"
+            ></div>
+          </div>
+          <div class="game-visuals" data-game="tony-hawk">
+            <div
+              class="background-effect"
+              style="background-image: url('/img/02-game-.jpg')"
+            ></div>
+          </div>
+          <div class="game-visuals" data-game="alan-wake">
+            <div
+              class="background-effect"
+              style="background-image: url('/img/03-game.jpg')"
+            ></div>
+          </div>
+          <div class="game-visuals" data-game="cyberpunk">
+            <div
+              class="background-effect"
+              style="background-image: url('/img/05-imagen-principal.png')"
+            ></div>
+          </div>
+        </div>
+
+        <div class="featured-content-panel">
+          <div class="tabs-navigation-wrapper">
+            <button class="tab-scroll-btn" id="tabPrevBtn">‹</button>
+            <div class="tabs-viewport">
+              <nav class="game-tabs">
+                <button class="tab-btn active" data-target="oblivion">
+                  The Elder Scrolls IV: Oblivion™ Remastered
+                </button>
+                <button class="tab-btn" data-target="doom">
+                  DOOM: The Dark Ages
+                </button>
+                <button class="tab-btn" data-target="tony-hawk">
+                  Tony Hawk's™ Pro Skater™ 1
+                </button>
+                <button class="tab-btn" data-target="alan-wake">
+                  Alan Wake 2
+                </button>
+                <button class="tab-btn" data-target="cyberpunk">
+                  Cyberpunk 2077
+                </button>
+              </nav>
+            </div>
+            <button class="tab-scroll-btn" id="tabNextBtn">›</button>
+          </div>
+
+          <div class="game-details-content">
+            <article class="game-detail active" data-game="oblivion">
+              <h2>The Elder Scrolls IV: Oblivion™ Remastered</h2>
+              <div class="platform-tags">
+                <span>XBOX SERIES X|S</span><span>PC</span><span>CLOUD</span>
+              </div>
+              <p>
+                Experimenta el Juego del Año de 2006 con un increíble apartado
+                visual renovado y una capacidad de juego rediseñada. Explora los
+                vastos paisajes de Cyrodiil como nunca antes y pon fin a las
+                fuerzas de Oblivion en uno de los RPG más importantes jamás
+                creados, de la mano del galardonado desarrollador Bethesda Game
+                Studios.
+              </p>
+              <a href="#" class="more-info-link">VER MÁS INFORMACIÓN ></a>
+            </article>
+
+            <article class="game-detail" data-game="doom">
+              <h2>DOOM: The Dark Ages</h2>
+              <div class="platform-tags">
+                <span>XBOX SERIES X|S</span><span>PC</span>
+              </div>
+              <p>
+                La precuela del aclamado DOOM (2016). Ponte en la piel del DOOM
+                Slayer en una guerra medieval contra las fuerzas del infierno.
+                Domina un arsenal de armas devastadoras y desata tu furia en
+                esta épica batalla por la supervivencia de la humanidad.
+              </p>
+              <a href="#" class="more-info-link">VER MÁS INFORMACIÓN ></a>
+            </article>
+
+            <article class="game-detail" data-game="tony-hawk">
+              <h2>Tony Hawk's™ Pro Skater™ 1</h2>
+              <div class="platform-tags">
+                <span>XBOX SERIES X|S</span><span>PC</span><span>CLOUD</span>
+              </div>
+              <p>
+                Vuelve a los orígenes con el juego que definió una generación,
+                completamente remasterizado. Patina como el legendario Tony
+                Hawk, realiza combos increíbles y revive la banda sonora icónica
+                que acompañó a millones de jugadores en todo el mundo.
+              </p>
+              <a href="#" class="more-info-link">VER MÁS INFORMACIÓN ></a>
+            </article>
+
+            <article class="game-detail" data-game="alan-wake">
+              <h2>Alan Wake 2</h2>
+              <div class="platform-tags">
+                <span>XBOX SERIES X|S</span><span>PC</span>
+              </div>
+              <p>
+                Una serie de asesinatos rituales amenaza Bright Falls, una
+                pequeña comunidad rodeada por la naturaleza del noroeste del
+                Pacífico. Saga Anderson, una agente del FBI, llega para
+                investigar los crímenes y descubre las páginas de una historia
+                de terror que empieza a hacerse realidad.
+              </p>
+              <a href="#" class="more-info-link">VER MÁS INFORMACIÓN ></a>
+            </article>
+
+            <article class="game-detail" data-game="cyberpunk">
+              <h2>Cyberpunk 2077</h2>
+              <div class="platform-tags">
+                <span>XBOX SERIES X|S</span><span>PC</span>
+              </div>
+              <p>
+                Una historia de acción y aventura de mundo abierto ambientada en
+                Night City, una megalópolis obsesionada con el poder, el glamur
+                y la modificación corporal. Te convertirás en V, un mercenario
+                que busca un implante único que concede la inmortalidad.
+              </p>
+              <a href="#" class="more-info-link">VER MÁS INFORMACIÓN ></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enjoy-more-section">
+      <h2 class="section-title">Disfruta aún más con Game Pass</h2>
+
+      <div class="enjoy-carousel-wrapper">
+        <div class="carousel-stage">
+          <div class="carousel-cell" id="left-peek"></div>
+          <div class="carousel-cell" id="center-stage"></div>
+          <div class="carousel-cell" id="right-peek"></div>
+        </div>
+
+        <button class="enjoy-carousel-btn prev" id="enjoyPrevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="enjoy-carousel-btn next" id="enjoyNextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="slide-templates" style="display: none">
+        <div class="slide-content-wrapper">
+          <div class="slide-image-container">
+            <img src="/img/01-call-duty.jpg" alt="Juegos de EA Play" />
+          </div>
+          <div class="slide-text-container">
+            <span class="slide-tag">EA PLAY</span>
+            <h3>Experimenta el mundo de EA</h3>
+            <p>
+              Disfruta de una biblioteca con los mejores títulos de Electronic
+              Arts, recompensas exclusivas y pruebas anticipadas de nuevos
+              juegos. Incluido con Game Pass Ultimate.
+            </p>
+            <a href="#" class="slide-cta-link"
+              >EXPLORA LOS JUEGOS DE EA PLAY ›</a
+            >
+          </div>
+        </div>
+        <div class="slide-content-wrapper">
+          <div class="slide-image-container">
+            <img
+              src="/img/02-game-.jpg"
+              alt="Jugar en múltiples dispositivos"
+            />
+          </div>
+          <div class="slide-text-container">
+            <span class="slide-tag">ULTIMATE</span>
+            <h3>Descubre más formas de jugar</h3>
+            <p>
+              Transmite cientos de juegos en directo a través de dispositivos
+              móviles, tabletas, PC, televisores inteligentes y consolas
+              compatibles. Ahora puedes transmitir juegos que tengas en la nube.
+            </p>
+            <a href="#" class="slide-cta-link"
+              >EXPLORA LOS JUEGOS EN LA NUBE ›</a
+            >
+          </div>
+        </div>
+        <div class="slide-content-wrapper">
+          <div class="slide-image-container">
+            <img src="/img/03-game.jpg" alt="Beneficios de Game Pass" />
+          </div>
+          <div class="slide-text-container">
+            <span class="slide-tag">VENTAJAS</span>
+            <h3>Ventajas y recompensas exclusivas</h3>
+            <p>
+              Disfruta de ventajas gratuitas, incluyendo contenido en el juego,
+              consumibles y ofertas de socios con tu suscripción a Game Pass
+              Ultimate. Accede a descuentos exclusivos.
+            </p>
+            <a href="#" class="slide-cta-link">VER VENTAJAS DISPONIBLES ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Miguel ==> Planes de Game Pass -->
+    <section class="elige-tu-plan" id="planes">
+      <!-- Detalles de los planes y beneficios adicionales -->
 
       <section class="plans">
         <h2>Game Pass</h2>
@@ -151,16 +405,231 @@
       </section>
     </section>
 
-    <!-- Lucas ==> Preguntas frecuentes -->
-    <section class="lucas">
-      <!-- Preguntas frecuentes, acordeones o listas -->
-      <h2>Sección de Lucas - Preguntas frecuentes</h2>
+    <section class="faq-section" id="preguntas">
+      <h2 class="faq-main-title">Preguntas más frecuentes</h2>
+
+      <div class="faq-accordion">
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>¿Qué es Xbox Game Pass?</span>
+          </summary>
+          <div class="faq-content">
+            <p>Aquí iría la respuesta detallada sobre qué es Xbox Game Pass.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>¿Game Pass está disponible en mi región?</span>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí iría la información sobre la disponibilidad regional de Game
+              Pass.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>¿Dónde puedo encontrar juegos de Game Pass?</span>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí iría la explicación sobre cómo encontrar y explorar el
+              catálogo de juegos.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span
+              >¿Durante cuánto tiempo tengo acceso a los juegos del catálogo de
+              Game Pass?</span
+            >
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí iría la respuesta sobre la duración del acceso a los juegos.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span
+              >¿Está EA Play disponible automáticamente para los miembros de
+              Game Pass? ¿Cómo puedo comenzar?</span
+            >
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí iría la explicación sobre la integración de EA Play y los
+              pasos para empezar a usarlo.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>¿Cómo se cancela Game Pass?</span>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí irían las instrucciones detalladas para cancelar la
+              suscripción a Game Pass.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>¿Cómo puedo detener la facturación periódica?</span>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Aquí irían los pasos para desactivar la renovación automática de
+              la suscripción.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="more-faqs">
+        <h3 class="more-faqs-title">Ver más P+F</h3>
+        <ul class="more-faqs-list">
+          <li>
+            <a href="#"
+              >P+F DE GAME PASS ULTIMATE
+              <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >P+F DE PC GAME PASS <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >P+F DE GAME PASS STANDARD
+              <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >P+F DE GAME PASS CORE <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >P+F DE GAME PASS PARA CONSOLA
+              <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Angely ==> Pie de página -->
-    <footer>
-      <!-- Información legal, enlaces de soporte, redes sociales -->
-      <h2>Pie de página - Angely</h2>
+    <footer class="site-footer">
+      <div class="footer-top-bar">
+        <span>Sigue a Game Pass</span>
+        <div class="social-icons">
+          <a href="#" aria-label="Correo"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-column">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="#">Xbox consolas</a></li>
+            <li><a href="#">Juegos Xbox</a></li>
+            <li><a href="#">Xbox Game Pass</a></li>
+            <li><a href="#">Accesorios para Xbox</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#">Soporte técnico de Xbox</a></li>
+            <li><a href="#">Comentarios</a></li>
+            <li><a href="#">Estándares de la comunidad</a></li>
+            <li><a href="#">Advertencia sobre ataques fotosensibles</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Microsoft Store</h4>
+          <ul>
+            <li><a href="#">Cuenta de Microsoft</a></li>
+            <li><a href="#">Soporte técnico de Microsoft Store</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Seguimiento de pedidos</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Para desarrolladores</h4>
+          <ul>
+            <li><a href="#">Juegos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="region-selector">
+          <a href="#">
+            <i class="fa-solid fa-globe"></i>
+            <span>Español (España, alfabetización internacional)</span>
+          </a>
+        </div>
+        <div class="legal-links">
+          <ul>
+            <li>
+              <a href="#">
+                <svg
+                  width="28"
+                  height="14"
+                  viewBox="0 0 28 14"
+                  role="img"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M28 12.6H19.5V1.4h8.5v11.2zM26.9 2.5H20.6v9h6.3v-9zM16.4 14L18 12.6h-4.3l1.5-3.5L12 7l-1.6 3.5H6.2L7.6 14h8.8zM0 12.6h15.3V1.4H0v11.2zM1.1 2.5h13.1v9H1.1v-9z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span>Tus opciones de privacidad</span>
+              </a>
+            </li>
+            <li><a href="#">Privacidad de la salud del consumidor</a></li>
+            <li><a href="#">Ponte en contacto con Microsoft</a></li>
+            <li><a href="#">Imprimir</a></li>
+            <li><a href="#">Privacidad y cookies</a></li>
+            <li><a href="#">Condiciones de uso</a></li>
+            <li><a href="#">Marcas registradas</a></li>
+            <li><a href="#">Avisos sobre terceros</a></li>
+            <li><a href="#">Sobre nuestra publicidad</a></li>
+            <li><a href="#">Docs de cumplimiento de la UE</a></li>
+            <li><span>&copy; Microsoft 2025</span></li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="js/app-01.js"></script>
   </body>

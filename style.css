@@ -14,8 +14,9 @@ html,
 body {
   height: 100%;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000; /* Fondo oscuro, como el sitio Xbox */
-  color: #fff;
+  /* --- CORRECCIÓN --- */
+  background-color: #fff; /* Fondo blanco por defecto */
+  color: #101010; /* Texto oscuro por defecto */
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -340,4 +341,769 @@ h1 {
 
 .acciones h2:hover {
   color: #bf793b;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: #f2f2f2; /* Gris claro de fondo */
+  color: #616161; /* Color de texto principal */
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+a {
+  color: #616161;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Barra Superior (Redes Sociales) --- */
+.footer-top-bar {
+  background-color: #e6e6e6;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+  color: #000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 18px;
+}
+
+/* --- Contenido Principal (Columnas de enlaces) --- */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 36px 5%;
+}
+
+.footer-column h4 {
+  color: #000; /* Títulos de columna en negro */
+  font-size: 15px;
+  font-weight: 600; /* Semibold */
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  font-size: 13px;
+}
+
+/* --- Barra Inferior (Legales y Región) --- */
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+  gap: 20px;
+  padding: 24px 5%;
+  font-size: 11px;
+}
+
+.region-selector a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legal-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.legal-links li {
+  display: flex;
+  align-items: center;
+}
+
+.legal-links a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --- Diseño Responsivo para Móviles --- */
+@media (max-width: 960px) {
+  .footer-main {
+    /* Pasa de 4 a 2 columnas en tablets */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    /* Pasa a 1 columna en móviles */
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-bar {
+    /* Apila el selector de región y los enlaces legales */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .legal-links ul {
+    /* Apila los enlaces legales verticalmente */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Contenedor Principal de la Sección --- */
+.faq-section {
+  max-width: 900px; /* Ancho máximo para legibilidad */
+  margin: 40px auto; /* Centrado y con espacio vertical */
+  padding: 0 20px; /* Espacio a los lados en pantallas pequeñas */
+}
+
+.faq-main-title {
+  font-size: 28px;
+  font-weight: 600; /* Semibold */
+  margin-bottom: 24px;
+}
+
+/* --- Acordeón de Preguntas --- */
+.faq-accordion details {
+  border-bottom: 1px solid #e6e6e6; /* Borde inferior para cada pregunta */
+}
+
+/* El elemento <summary> es la parte visible y clickeable de <details> */
+.faq-accordion summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 400; /* Normal */
+  cursor: pointer;
+  list-style: none; /* Oculta el marcador de flecha por defecto */
+}
+
+/* Ocultar el marcador por defecto en todos los navegadores */
+.faq-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-accordion summary i {
+  font-size: 12px;
+  transition: transform 0.2s ease-in-out; /* Animación suave para el ícono */
+}
+
+/* Gira el ícono cuando la pregunta está abierta */
+.faq-accordion details[open] summary i {
+  transform: rotate(90deg);
+}
+
+/* Contenido de la respuesta */
+.faq-content {
+  padding: 0 0 20px 28px; /* Padding para alinear con el texto de la pregunta */
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Sección "Ver más P+F" --- */
+.more-faqs {
+  margin-top: 48px;
+}
+
+.more-faqs-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.more-faqs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.more-faqs-list li {
+  margin-bottom: 12px;
+}
+
+.more-faqs-list a {
+  color: #107c10; /* Verde característico de Xbox */
+  font-size: 15px;
+  font-weight: 600; /* Semibold */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.more-faqs-list a:hover {
+  text-decoration: underline;
+}
+
+.more-faqs-list a i {
+  font-size: 10px;
+}
+
+/* --- Contenedor Principal de la Sección --- */
+.game-carousel-section {
+  position: relative;
+  padding: 80px 0;
+  background-image: url('/img/01-call-duty.jpg'); /* Imagen de fondo de juego */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Evita que los botones se salgan por completo */
+}
+
+/* Capa oscura sobre la imagen de fondo */
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Negro con 85% de opacidad */
+  z-index: 1;
+}
+
+/* Contenedor que cumple el requisito 15% - 70% - 15% */
+.carousel-container {
+  position: relative;
+  z-index: 2; /* Para que el contenido esté sobre la capa oscura */
+  width: 70%;
+  margin: 0 auto; /* Centra el contenedor y crea los márgenes laterales */
+  text-align: center;
+}
+
+/* --- Títulos --- */
+.carousel-main-title {
+  color: #fff;
+  font-size: 30px; /* <-- Texto más grande */
+  font-weight: 700; /* <-- Texto en negrita (bold) */
+  margin-bottom: 30px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para más notoriedad */
+}
+
+.bottom-cta-title {
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5.5rem; /* <-- Aumentamos el tamaño general */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* <-- Añadimos espacio para que no estén tan juntas */
+  line-height: 1.3; /* <-- Aumentamos la altura entre líneas */
+  margin-top: 60px; /* <-- Un poco más de margen superior */
+}
+
+/* --- Estructura del Carrusel --- */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel {
+  overflow: hidden; /* MUY IMPORTANTE: oculta las tarjetas que están fuera del área visible */
+}
+
+.carousel-track {
+  display: flex; /* Pone las tarjetas en una fila */
+  gap: 20px; /* Espacio entre tarjetas */
+  transition: transform 0.5s ease-in-out; /* La animación del deslizamiento */
+}
+
+/* --- Tarjetas de Juego --- */
+.game-card {
+  /* Hacemos que cada tarjeta ocupe más espacio (aprox. 4 visibles) */
+  flex: 0 0 calc(25% - 15px);
+  text-align: center;
+}
+
+.game-card img {
+  width: 100%;
+  /* Duplicamos la altura para hacerlas el doble de largas */
+  height: 360px;
+  object-fit: cover; /* Clave para que la imagen no se deforme */
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover img {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  cursor: pointer;
+}
+
+.game-card p {
+  color: #fff;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* --- Botones de Navegación --- */
+.carousel-btn {
+  position: absolute;
+  top: 40%; /* Ajusta la posición vertical */
+  transform: translateY(-50%);
+  background-color: rgba(30, 30, 30, 0.7);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(50, 50, 50, 1);
+}
+
+.carousel-btn.prev {
+  left: -25px; /* Posición del botón izquierdo */
+}
+
+.carousel-btn.next {
+  right: -25px; /* Posición del botón derecho */
+}
+
+/* --- Sección Principal del Juego Destacado --- */
+.featured-game-section {
+  background-color: #fff;
+  padding: 60px 0;
+  overflow-x: clip;
+}
+
+.featured-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* --- Columna Izquierda (Imágenes) --- */
+.featured-image-panel {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  background-color: #101010;
+  box-shadow: 0 0 0 100vw #101010;
+  clip-path: inset(0 0 0 -100vw);
+}
+
+.game-visuals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.game-visuals.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.background-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --- AQUÍ ESTÁ LA CORRECCIÓN FINAL --- */
+.character-image {
+  position: absolute;
+  /* Centramos la imagen en el contenedor */
+  top: 0;
+  left: 0;
+  transform: none; /* Reseteamos la transformación anterior */
+
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+
+  /* LA LÍNEA CLAVE: Cambiamos 'contain' por 'cover' */
+  object-fit: cover; /* Esto fuerza a la imagen a CUBRIR todo el espacio */
+}
+
+/* --- Columna Derecha (Contenido) --- */
+.featured-content-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* --- Estilos para el Carrusel de Tabs --- */
+.tabs-navigation-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+}
+.tabs-viewport {
+  flex-grow: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+.game-tabs {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease-in-out;
+}
+.tab-btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #616161;
+  background: none;
+  border: none;
+  padding: 0 4px 12px 4px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.tab-btn:hover {
+  color: #101010;
+}
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #107c10;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.tab-btn.active {
+  color: #101010;
+}
+.tab-btn.active::after {
+  transform: scaleX(1);
+}
+.tab-scroll-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #616161;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.tab-scroll-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+.tab-scroll-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* --- Contenido de Texto --- */
+.game-details-content {
+  position: relative;
+}
+.game-detail {
+  display: none;
+}
+.game-detail.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.game-detail h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #101010;
+  margin: 0 0 16px 0;
+}
+.platform-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.platform-tags span {
+  background-color: #e6f2e6;
+  color: #107c10;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.game-detail p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.more-info-link {
+  color: #107c10;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+}
+.more-info-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Estilos para la NUEVA SECCIÓN 'JUEGA DESDE EL DÍA UNO' --- */
+
+.day-one-section {
+  position: relative; /* Necesario para el efecto de fondo */
+  background-color: #f2f2f2; /* Fondo gris claro de la sección */
+  padding: 120px 20px 80px 20px;
+  text-align: center;
+}
+
+/* Efecto de fondo con líneas topográficas en la parte superior */
+.day-one-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.day-one-container {
+  position: relative; /* Para que el contenido esté por encima del efecto de fondo */
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.day-one-section h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5rem; /* Tamaño grande y llamativo */
+  color: #107c10; /* Verde Xbox */
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.day-one-section .accent-line {
+  width: 100px;
+  height: 6px;
+  background-color: #9bf00b; /* Verde lima de acento */
+  border-radius: 3px;
+  margin: 25px auto; /* Centrado y con espacio vertical */
+}
+
+.day-one-section p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+}
+
+.day-one-section .cta-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Espacio entre los dos enlaces */
+  flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+}
+
+.day-one-section .cta-links a {
+  color: #107c10;
+  font-size: 0.9rem;
+  font-weight: 700; /* bold */
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.day-one-section .cta-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FIN DE LOS NUEVOS ESTILOS ===== */
+
+/* --- Tus estilos anteriores para las otras secciones ... --- */
+/* (Aquí irían los estilos para .featured-game-section, etc.) */
+
+/* --- Estilos para la SECCIÓN 'DISFRUTA AÚN MÁS' --- */
+
+.enjoy-more-section {
+  background-color: #f2f2f2;
+  padding: 80px 0;
+  overflow: hidden; /* Evita cualquier desbordamiento */
+}
+
+.section-title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.5rem;
+  color: #101010;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+}
+
+.enjoy-carousel-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* El escenario que contiene las 3 celdas */
+.carousel-stage {
+  display: grid;
+  /* Rejilla de 3 columnas: la del centro es 2.5 veces más ancha que las laterales */
+  grid-template-columns: 1fr 2.5fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-cell {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Las celdas laterales están escaladas y con menos opacidad */
+#left-peek,
+#right-peek {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+/* La celda central está a tamaño completo */
+#center-stage {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Estilos para el contenido de cada diapositiva (la caja blanca) */
+.slide-content-wrapper {
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slide-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.slide-text-container {
+  padding: 30px 40px;
+}
+.slide-tag {
+  background-color: #107c10;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.slide-text-container h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #101010;
+  margin: 0 0 16px 0;
+}
+.slide-text-container p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+.slide-cta-link {
+  color: #107c10;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.slide-cta-link:hover {
+  text-decoration: underline;
+}
+
+/* Botones de navegación */
+.enjoy-carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.2s ease;
+}
+.enjoy-carousel-btn:hover {
+  background-color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+.enjoy-carousel-btn.prev {
+  left: 0;
+}
+.enjoy-carousel-btn.next {
+  right: 0;
+}
+.enjoy-carousel-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
