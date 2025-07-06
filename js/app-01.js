@@ -209,3 +209,38 @@ window.addEventListener('load', () => {
   // Dibujamos el estado inicial del carrusel al cargar la página
   drawCarousel();
 });
+
+// HEADER LOGIC
+
+window.addEventListener('load', () => {
+  // --- LÓGICA PARA EL MENÚ FIJO (STICKY HEADER) ---
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    // Obtenemos la posición inicial del header
+    const stickyPoint = header.offsetTop;
+
+    window.addEventListener('scroll', () => {
+      // Si el scroll vertical de la página es mayor que la posición inicial del header
+      if (window.scrollY > stickyPoint) {
+        // Añadimos la clase para hacerlo fijo
+        header.classList.add('is-sticky');
+      } else {
+        // La quitamos si volvemos arriba
+        header.classList.remove('is-sticky');
+      }
+    });
+  }
+
+  // --- LÓGICA PARA OCULTAR/MOSTRAR EL SUBMENÚ ---
+  const dismissButton = document.getElementById('dismissBtn');
+  if (dismissButton) {
+    dismissButton.addEventListener('click', () => {
+      // Al hacer clic, simplemente añadimos o quitamos la clase 'submenu-hidden' del header.
+      // El CSS se encarga del resto (la animación y de ocultar la barra).
+      header.classList.toggle('submenu-hidden');
+    });
+  }
+
+  // --- CÓDIGO DE TUS OTRAS SECCIONES (SI LO HAY) ---
+  // (Pega aquí el código JS para los otros carruseles)
+});
